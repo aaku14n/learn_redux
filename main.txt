@@ -1,2 +1,2 @@
- data main
- from pull data
+data main
+ from pull data from aaku
