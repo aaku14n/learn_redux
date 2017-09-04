@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 data main
+=======
+main
+>>>>>>> 1ed5074e6fe6cfdae930721b87548356043fa41c
