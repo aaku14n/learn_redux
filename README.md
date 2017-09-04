@@ -1,2 +1,2 @@
 main
- data of Redux
+ data of Redux from data
