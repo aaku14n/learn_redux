@@ -1,2 +1,2 @@
-mian
+main
  from pull data
