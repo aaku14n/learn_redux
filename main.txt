@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 main from pull data
+=======
+ data main
+ from pull data
+>>>>>>> aaku
