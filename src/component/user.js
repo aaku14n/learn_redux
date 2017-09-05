@@ -12,10 +12,14 @@ class User extends React.Component {
   }
   render() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return <div>{this.props.user.map(post => this.print(post))}</div>;
 =======
     return <div>data</div>;
 >>>>>>> current
+=======
+    return <div>data main</div>;
+>>>>>>> 8e179fab57ce01b07bd8b5f13ddce62f834e5c7a
   }
 }
 function mapStateToProps(state) {
