@@ -1,7 +1,11 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+<<<<<<< HEAD
 import { selectAction } from "../action/index";
+=======
+
+>>>>>>> b46718e1803eb9ab0e5bb6ea867ff625bb4ad074
 class User extends React.Component {
   print(user) {
     return <h1 onClick={() => this.props.selectAction(user)}>{user.id}</h1>;
