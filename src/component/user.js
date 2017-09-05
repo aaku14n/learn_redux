@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 class User extends React.Component {
   render() {
-    return <div>data</div>;
+    return <div>data main</div>;
   }
 }
 function mapStateToProps(state) {
