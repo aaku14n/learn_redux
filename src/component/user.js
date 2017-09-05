@@ -5,7 +5,6 @@ import { selectAction } from "../action/index";
 import UserList from "./userlist";
 class User extends React.Component {
   renderUser(todo, index) {
-    console.log(todo);
     return (
       <UserList
         key={index}
