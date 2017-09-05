@@ -11,10 +11,15 @@ class User extends React.Component {
     return <h1 onClick={() => this.props.selectAction(user)}>{user.id}</h1>;
   }
   render() {
+<<<<<<< HEAD
     return <div>{this.props.user.map(post => this.print(post))}</div>;
+=======
+    return <div>data</div>;
+>>>>>>> current
   }
 }
 function mapStateToProps(state) {
+  console.log(state);
   return {
     user: state.users
   };
