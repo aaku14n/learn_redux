@@ -50,8 +50,9 @@ class UserList extends Component {
 
   render() {
     const { todo } = this.props;
+    const { selectAction } = this.props;
     return todo.status ? (
-      <div className="Todo">
+      <div className="Todo" onClick={() => selectAction(todo)}>
         {this.renderButtons(todo)}
         {this.renderTitle(todo)}
         {this.renderBody(todo)}

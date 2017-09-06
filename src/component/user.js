@@ -3,12 +3,14 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { selectAction } from "../action/index";
 import UserList from "./userlist";
+import UserActive from "./user-active";
 class User extends React.Component {
   renderUser(todo, index) {
     return (
       <UserList
         key={index}
         todo={todo}
+        selectAction={this.props.selectAction}
         editTodo={todo => this.editTodo(todo)}
         deleteTodo={todo => this.deleteTodo(todo)}
       />
@@ -26,7 +28,7 @@ class User extends React.Component {
           </div>
         </div>
         <div className="PageRight">
-          {/* <TodoAdd addTodo={todo => this.addTodo(todo)} /> */}
+          <UserActive />
         </div>
       </div>
     );
