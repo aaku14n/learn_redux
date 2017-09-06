@@ -1,23 +1,23 @@
-export const selectAction = user => {
+export const selectUserAction = user => {
   return {
     type: "User Selected",
     payload: user
   };
 };
 
-export const deleteAction = user => {
+export const deleteUserAction = user => {
   return {
     type: "DELETE_USER",
     payload: user
   };
 };
-export const editAction = user => {
+export const editUserAction = user => {
   return {
     type: "EDIT_USER",
     payload: user
   };
 };
-export const addAction = user => {
+export const addUserAction = user => {
   return {
     type: "ADD_USER",
     payload: user
