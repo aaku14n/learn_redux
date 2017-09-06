@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
 import "../css/UserList.css";
 
-class UserList extends Component {
+export default class UserList extends Component {
   renderTitle(todo) {
     return (
       <div className="Todo-title">
@@ -49,9 +48,9 @@ class UserList extends Component {
   }
 
   render() {
-    const { todo } = this.props;
+    const { todo, selectAction } = this.props;
     return todo.status ? (
-      <div className="Todo">
+      <div className="Todo" onClick={() => selectAction(todo)}>
         {this.renderButtons(todo)}
         {this.renderTitle(todo)}
         {this.renderBody(todo)}
@@ -118,5 +117,3 @@ class UserList extends Component {
       "none";
   }
 }
-
-export default UserList;

@@ -1,16 +1,24 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectAction } from "../action/index";
+import {
+  selectAction,
+  deleteAction,
+  editAction,
+  addAction
+} from "../action/index";
 import UserList from "./userlist";
+import UserActive from "./user-active";
+import UserAdd from "./user-add";
 class User extends React.Component {
   renderUser(todo, index) {
     return (
       <UserList
         key={index}
         todo={todo}
-        editTodo={todo => this.editTodo(todo)}
-        deleteTodo={todo => this.deleteTodo(todo)}
+        selectAction={this.props.selectAction}
+        editTodo={this.props.editAction}
+        deleteTodo={this.props.deleteAction}
       />
     );
   }
@@ -21,12 +29,12 @@ class User extends React.Component {
           <div className="TodoList">
             <h1 className="TodoList-header">Todos</h1>
             <nav className="TodoList-body">
-              {this.props.user.map((todo, i) => this.renderUser(todo, i))}
+              {this.props.users.map((todo, i) => this.renderUser(todo, i))}
             </nav>
           </div>
         </div>
         <div className="PageRight">
-          {/* <TodoAdd addTodo={todo => this.addTodo(todo)} /> */}
+          <UserAdd addTodo={this.props.addAction} />
         </div>
       </div>
     );
@@ -34,10 +42,18 @@ class User extends React.Component {
 }
 function mapStateToProps(state) {
   return {
-    user: state.users
+    users: state.users
   };
 }
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ selectAction: selectAction }, dispatch);
+  return bindActionCreators(
+    {
+      selectAction,
+      deleteAction,
+      editAction,
+      addAction
+    },
+    dispatch
+  );
 }
 export default connect(mapStateToProps, matchDispatchToProps)(User);
