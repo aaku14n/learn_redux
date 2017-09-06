@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import User from "./user";
+import Body from "./user-body";
 import Header from "./header";
 import Footer from "./footer";
 export default class Home extends React.Component {
@@ -8,7 +8,7 @@ export default class Home extends React.Component {
     return (
       <div className="App">
         <Header />
-        <User />
+        <Body />
         <Footer />
       </div>
     );

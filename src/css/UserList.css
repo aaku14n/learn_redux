@@ -1,7 +1,7 @@
-.TodoList-body {
+.UserList-body {
   width: max-content;
 }
-.Todo {
+.User {
   background-color: whitesmoke;
   margin-bottom: 10px;
   padding: 10px;
@@ -12,15 +12,15 @@
   width: 560px;
   color: slategray;
 }
-.Todo:hover {
+.User:hover {
   background-color: lightsteelblue;
   color: unset;
 }
 
-.Todo:hover .Todo-edit-button {
+.User:hover .User-edit-button {
   display: block;
 }
-.Todo-edit-button {
+.User-edit-button {
   display: none;
   margin-top: -8px;
   float: right;
@@ -32,10 +32,10 @@
   background: none;
   border: none;
 }
-.Todo:hover .Todo-delete-button {
+.User:hover .User-delete-button {
   display: block;
 }
-.Todo-delete-button {
+.User-delete-button {
   display: none;
   margin-top: -10px;
   float: right;
@@ -45,6 +45,6 @@
   background: none;
   border: none;
 }
-.Todo-Body-Edit {
+.User-Body-Edit {
   display: none;
 }

@@ -5,55 +5,55 @@ export default class UserAdd extends React.Component {
   render() {
     return (
       <div>
-        <h1>Add Todo</h1>
+        <h1>Add User</h1>
         Welcome<br />
         <input
           type="text"
-          className="Todo-add-title-input"
-          id="Todo-add-title"
+          className="User-add-title-input"
+          id="User-add-title"
         />
         <br />
         <textarea
           name="description"
-          className="Todo-add-description-input"
-          id="Todo-add-description"
+          className="User-add-description-input"
+          id="User-add-description"
         />
         <br />
         <button
           type="button"
           value="Save"
-          className="Todo-add-button"
-          onClick={e => this.addTodo()}
+          className="User-add-button"
+          onClick={e => this.addUser()}
         >
           Save
         </button>
         <button
           type="reset"
           value="Reset"
-          className="Todo-add-button"
-          onClick={e => this.todoAddReset()}
+          className="User-add-button"
+          onClick={e => this.UserAddReset()}
         >
           Reset
         </button>
       </div>
     );
   }
-  addTodo() {
-    let title = document.getElementById("Todo-add-title").value;
-    let description = document.getElementById("Todo-add-description").value;
-    this.todoAddReset();
+  addUser() {
+    let title = document.getElementById("User-add-title").value;
+    let description = document.getElementById("User-add-description").value;
+    this.UserAddReset();
     if (title === "" || description === "") {
       return true;
     }
-    let todo = {};
-    todo.title = title;
-    todo.description = description;
-    todo.status = 1;
-    this.props.addTodo(todo);
+    let User = {};
+    User.title = title;
+    User.description = description;
+    User.status = 1;
+    this.props.addUser(User);
   }
 
-  todoAddReset() {
-    document.getElementById("Todo-add-title").value = "";
-    document.getElementById("Todo-add-description").value = "";
+  UserAddReset() {
+    document.getElementById("User-add-title").value = "";
+    document.getElementById("User-add-description").value = "";
   }
 }
