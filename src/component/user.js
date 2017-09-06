@@ -1,16 +1,38 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { selectAction } from "../action/index";
+import UserList from "./userlist";
 class User extends React.Component {
-  print(user) {
-    return <h1 onClick={() => this.props.selectAction(user)}>{user.id}</h1>;
+  renderUser(todo, index) {
+    return (
+      <UserList
+        key={index}
+        todo={todo}
+        editTodo={todo => this.editTodo(todo)}
+        deleteTodo={todo => this.deleteTodo(todo)}
+      />
+    );
   }
   render() {
-    return <div>{this.props.user.map(post => this.print(post))}</div>;
+    return (
+      <div className="PageContent">
+        <div className="PageLeft">
+          <div className="TodoList">
+            <h1 className="TodoList-header">Todos</h1>
+            <nav className="TodoList-body">
+              {this.props.user.map((todo, i) => this.renderUser(todo, i))}
+            </nav>
+          </div>
+        </div>
+        <div className="PageRight">
+          {/* <TodoAdd addTodo={todo => this.addTodo(todo)} /> */}
+        </div>
+      </div>
+    );
   }
 }
 function mapStateToProps(state) {
-  console.log(state);
   return {
     user: state.users
   };
